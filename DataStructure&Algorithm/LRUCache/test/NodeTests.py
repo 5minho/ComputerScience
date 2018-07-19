@@ -1,12 +1,11 @@
 import unittest
-from LRUCache.LinkedList import Node
+from LRUCache.DoublyLinkedList import Node
 
 
 class NodeTests(unittest.TestCase):
 
     def test_init_node(self):
         node = Node(1)
-
         self.assertEqual(1, node.item, "node 의 item 은 1 이어야 한다.")
         self.assertIsNone(node.prev_node, "node 의 prev 기본값은 None 이어야한다")
         self.assertIsNone(node.next_node, "node 의 next 기본값은 None 이어야한다")
